@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/firstFragment">
+
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.example.resultadosf1.SecondFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second">
+        <action
+            android:id="@+id/action_SecondFragment_to_pilotosFragment"
+            app:destination="@id/pilotosFragment" />
+        <action
+            android:id="@+id/action_SecondFragment_to_constructoresFragment"
+            app:destination="@id/constructoresFragment" />
+        <action
+            android:id="@+id/action_SecondFragment_to_creditosFragment"
+            app:destination="@id/creditosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pilotosFragment"
+        android:name="com.example.resultadosf1.PilotosFragment"
+        android:label="PilotosFragment" />
+    <fragment
+        android:id="@+id/constructoresFragment"
+        android:name="com.example.resultadosf1.ConstructoresFragment"
+        android:label="ConstructoresFragment" />
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="com.example.resultadosf1.FirstFragment"
+        android:label="Registrarse"
+        tools:layout="@layout/fragment_first">
+        <action
+            android:id="@+id/action_firstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_firstFragment_to_creditosFragment"
+            app:destination="@id/creditosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/creditosFragment"
+        android:name="com.example.resultadosf1.CreditosFragment"
+        android:label="CreditosFragment" />
+</navigation>
